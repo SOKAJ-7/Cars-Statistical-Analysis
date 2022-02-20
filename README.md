@@ -40,3 +40,26 @@ Lastly, the t-test for Lot 3 shows that the resulting p-value of 0.04168. This n
 
 
 ## Study Design: MechCar vs Competition
+
+**What Metrics will be Measured?**
+We would like to design a test to find out which metrics are the best predictors for the number of cars sold. I believe that a major factor into the decision of buying a car is the immediate and long-term cost of the vehicle. That is to say, the cost of purchase as well as the fuel efficiency of the car. There are other variables in this such as reliability and repair costs but those variables are hard to quantify so for the sake of simplicity we will stick to just the cost of the vehicle. Another thing to bear in mind is that different variables may be more or less impactful on the decision to buy a car depending on the purpose of the vehicle. For instance, lb-ft torque and hp may be very important to a person buying a working vehicle or a sportscar but make no difference at all to a commuter trying to find a car that will simply get them from point A to point B. We do not know what type of car MechaCar so we will only be looking at fuel efficiency and upfront cost as those are variables that impact every car.
+
+**What is the Null and Alternative Hypotheses for our test?**
+Null: There is a statistical correlation between fuel efficinecy, unit cost and the number of units sold.
+
+Alternative: There is no statistical correlation between fuel efficinecy, unit cost and the number of units sold.
+
+**What test will be used?**
+We could use a multiple linear regression model to determine whether fuel efficiency and unit cost are statistically significant predictors of unit sales and develop a model to predict the number of cars sold based on the unit cost and fuel efficiency. If our linear model returns coefficients below 0.05 for each variable, we can assume that the variables do in fact contribute to the number of units sold per vehicle model. The benefit of a linear model is that we can add different variables as we see fit and see how that impacts the R-squared value of our model. We may find that adding some variables results in a model that better explains the variance in our data and as result, allow us to create a more informative study.
+
+
+**Where will we find the data?**
+For our analysis we will need a dataframe that contains a vehicle make and model, the fuel efficiency of that vehicle, the unit cost, and the overall number of units sold.
+
+*Units Sold per Model*: For this we can use a website called goodcarbadcar.net, they are a website that publishes manufacturer-sourced data and has yearly sales numbers of every model of major automotive brands. They also have a link to download their datasets which makes this a convenient option.
+
+*Fuel Efficiency*: The United States Environmental Protection Agency has a comprehensive database on the fuel efficiencies of many different models of cars. This can be used to add to our dataset.
+
+*Unit Costs*: We could take the base MRSP for each model that is listed on the manufacturers website. This could be done by web-scraping but every manufacturer will have different website layouts so this may be time consuming. We could also use resources like Kelley Blue Book or other similar price advisor agencies.
+
+
