@@ -11,11 +11,12 @@
 > View(CarData)                    
 
 > lm(mpg~AWD+ground_clearance+spoiler_angle+vehicle_weight+vehicle_length, data=CarData)
+
 > summary(lm(mpg~AWD+ground_clearance+spoiler_angle+vehicle_weight+vehicle_length, data=CarData))                    
 
 ## Deliverable 2
 
-> setwd("~/Module 15 Challenge/Deliverable 3")
+> setwd("~/Module 15 Challenge/Deliverable 2")
 > SuspensionData <- read.csv("Suspension_coil.csv",header=TRUE, stringsAsFactors = FALSE)
 
 > total_summary <- SuspensionData %>% summarize(avg_PSI=mean(PSI),median_PSI=median(PSI),var_PSI=var(PSI), sd_PSI=sd(PSI))
@@ -29,7 +30,7 @@
 
 ## Deliverable 3
 
-#T-test for entire suspension dataset vs population mean> suspension_data_50_samples <- sample_n(SuspensionData, 50)
+#T-test for entire suspension dataset vs population mean
 
 > t.test(coil_data_overall_50_samples$PSI, mu=1500)
 
