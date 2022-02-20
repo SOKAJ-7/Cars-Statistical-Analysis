@@ -27,15 +27,16 @@ Does the current manufacturing data meet this design specification for all manuf
 By conducting one-sample t-tests on the mean coil PSI of each lot to the population mean of 1500 PSI, we can see that the only lot with a statistically different mean than 1500 is Lot 3.
 
 The figure below is the results of the t-test for the hypothesis that the mean PSI of Lot 1 is statistically different from the population mean of 1500 PSI. As we can see, the resulting p-value is above 0.05. This means that we cannot reject the null hypothesis and that the two means are statistically similar.
+
 ![Lot_1_t_test](https://user-images.githubusercontent.com/93050931/154866056-a37e693e-c0ff-4908-a3d9-664c2df39b2a.png)
 
 The t-test for Lot 2 has the same result. A p-value of greater than 0.05 means we cannot reject the null hypothesis and that the means are statistically similar.
+
 ![ttest_lot2](https://user-images.githubusercontent.com/93050931/154866182-60584207-6645-4638-81a3-2a5d7c4b16e0.png)
 
 Lastly, the t-test for Lot 3 shows that the resulting p-value of 0.04168. This number is below 0.05 and means that we can accept the alternative hypothesis that the two means are statistically different.
+
 ![lot_3_ttest](https://user-images.githubusercontent.com/93050931/154866235-422c41a1-dd4b-4634-bcbf-aed8f76f1e9d.png)
-
-
 
 
 ## Study Design: MechCar vs Competition
