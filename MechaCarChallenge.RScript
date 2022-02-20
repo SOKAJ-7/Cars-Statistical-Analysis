@@ -1,0 +1,49 @@
+## Deliverable 1
+
+> setwd("~/Module 15 Challenge")
+> setwd("~/Module 15 Challenge/Deliverable 1")
+> install.packages("dplyr")
+>library(dplyr)
+
+
+
+> CarData <- read.csv("MechaCar_mpg.csv",header=TRUE, stringsAsFactors = FALSE)
+> View(CarData)                    
+
+> lm(mpg~AWD+ground_clearance+spoiler_angle+vehicle_weight+vehicle_length, data=CarData)
+> summary(lm(mpg~AWD+ground_clearance+spoiler_angle+vehicle_weight+vehicle_length, data=CarData))                    
+
+## Deliverable 2
+
+> setwd("~/Module 15 Challenge/Deliverable 3")
+> SuspensionData <- read.csv("Suspension_coil.csv",header=TRUE, stringsAsFactors = FALSE)
+
+> total_summary <- SuspensionData %>% summarize(avg_PSI=mean(PSI),median_PSI=median(PSI),var_PSI=var(PSI), sd_PSI=sd(PSI))
+> View(total_summary)
+
+
+> lot_summary <- SuspensionData %>% group_by(Manufacturing_Lot) %>% summarize(avg_PSI=mean(PSI),median_PSI=median(PSI),var_PSI=var(PSI), sd_PSI=sd(PSI))
+> View(lot_summary)
+
+
+
+## Deliverable 3
+
+#T-test for entire suspension dataset vs population mean> suspension_data_50_samples <- sample_n(SuspensionData, 50)
+
+> t.test(coil_data_overall_50_samples$PSI, mu=1500)
+
+
+#T-test for Lot1 suspension dataset vs population mean
+
+> t.test(subset(SuspensionData, SuspensionData$Manufacturing_Lot=="Lot1")$PSI, mu = 1500)
+
+
+#T-test for Lot2 suspension dataset vs population mean
+
+> t.test(subset(SuspensionData, SuspensionData$Manufacturing_Lot=="Lot2")$PSI, mu = 1500)
+
+
+#T-test for Lot3 suspension dataset vs population mean
+
+> t.test(subset(SuspensionData, SuspensionData$Manufacturing_Lot=="Lot3")$PSI, mu = 1500)
