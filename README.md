@@ -15,9 +15,11 @@ Does the current manufacturing data meet this design specification for all manuf
 - In total, the manufacturing datra meets the design specifications for MechaCar. However, when examined individually we can see that Lot 3 does not meet the design specifications. Below are the figures used to make this conclusion:
 
 ![Total_mechacar](https://user-images.githubusercontent.com/93050931/154864974-eaf64d83-b989-4c6f-9500-7c7035931482.png)
+
 (**Figure 1: Summary of all lots**: *We can see that the variance of the PSI of the suspension coils is ~62.3 across all manufacturing lots. So, we can assume manufacturing is up to spec.*)
 
 ![indiv_manufacturing](https://user-images.githubusercontent.com/93050931/154865057-185aa6af-d18c-4af3-b301-8a987c8721e8.png)
+
 (**Figure 2: Summary for individual lots**: *In this figure it is clear that Lot 1 and 2 have extremely low variances which are masking the deficiencies of lot 3 when all lots are looked at together. We can therefore, conclude that Lot 3 is not manufacturing suspension coils up to the design specifications.*)
 
 
